@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Update, Upgrade and Install
-        run: sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get jekyll -yq
+        run: gem install jekyll bundler
         
       # Runs a single command using the runners shell
       - name: build site
