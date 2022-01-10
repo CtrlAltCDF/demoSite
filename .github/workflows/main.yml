@@ -27,12 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Docker, jekyll build
-        run: | 
-        export JEKYLL_VERSION=3.8
-        docker run --rm \
-          --volume="$PWD:/srv/jekyll" \
-          -it jekyll/builder:$JEKYLL_VERSION \
-          jekyll b -d build
+        run: docker run --rm --volume="$PWD:/srv/jekyll" -it jekyll/builder:latest jekyll b -d build
         
       - name: Deploy to site branch
         run: |
